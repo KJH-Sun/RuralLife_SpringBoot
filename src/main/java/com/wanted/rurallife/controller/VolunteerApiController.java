@@ -1,6 +1,7 @@
 package com.wanted.rurallife.controller;
 
 
+import static com.wanted.rurallife.common.util.constants.ResponseConstants.CREATED;
 import static com.wanted.rurallife.common.util.constants.ResponseConstants.OK;
 
 import com.wanted.rurallife.controller.dto.VolunteerDto.SignUpDto;
@@ -23,7 +24,7 @@ public class VolunteerApiController {
     @PostMapping()
     public ResponseEntity<Void> signUp(@RequestBody SignUpDto signUpDto) {
         volunteerService.signUp(signUpDto);
-        return OK;
+        return CREATED;
     }
 
 }

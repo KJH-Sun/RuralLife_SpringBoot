@@ -36,8 +36,6 @@ public class Activity {
     @OneToMany(mappedBy = "activity", cascade = CascadeType.ALL)
     private List<ActivityCategory> categorys;
 
-    private String addressRooms;
-
     private int activityTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
